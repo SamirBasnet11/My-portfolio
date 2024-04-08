@@ -1,38 +1,302 @@
-.App {
+/* App.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Header styles */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Section styles */
+section {
+  padding: 50px 20px;
+}
+
+/* About Me section styles */
+.about-section {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-section h2 {
+  color: #ffd700;
+  font-size: 28px;
+}
+
+.about-section p {
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Projects section styles */
+.projects-section {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 100px 20px;
+}
+
+.projects-section h2 {
+  color: #ffd700;
+  font-size: 28px;
+}
+
+.projects-section .project {
+  margin-bottom: 40px;
+}
+
+.projects-section .project h3 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.projects-section .project p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.projects-section .project img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.profile-links {
+  margin-right: 40px; /* Increase the right margin for more spacing */
+}
+
+.profile-links a {
+  color: #4fe106;
+  text-decoration: none;
+  margin-right: 100px; /* Adjust this value to increase or decrease the spacing between links */
+  position: relative; 
+  font-size: 40px;
+}
+
+.profile-links a:last-child {
+  margin-right: 0; /* Remove right margin for the last link */
+}
+
+.profile-links a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffd700; /* Glow color */
+  opacity: 0;
+  border-radius: 5px; /* Adjust this value to match your link's border radius */
+  transition: opacity 0.3s ease;
+  z-index: -5;
+}
+
+.profile-links a:hover:before {
+  opacity: 0.1; /* Adjust the opacity for the glow effect */
+  animation: shine 3s infinite alternate; /* Add glowing animation */
+}
+
+.profile-links a.github-icon {
+  background: linear-gradient(to right, #0773e7, transparent); /* Gradient mask */
+  background-size: 200% 100%; /* Double the width to cover the entire text */
+  background-position: -200px 0; /* Initial position of the gradient */
+  color: transparent; /* Hide the original text */
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 2px; /* Adjust padding for better visibility of the effect */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Define a hover effect */
+.profile-links a.github-icon:hover {
+  animation: shine 9s linear infinite; /* Apply the animation */
+  color: #0b95e4; /* Show the text */
+}
+
+.profile-links a.linkedin-icon:before {
+  content: "\f08c"; /* Unicode for LinkedIn icon */
+  font-family: "Font Awesome 5 Brands";
+  margin-right: 5px;
+}
+
+.profile-links a.instagram-icon:before {
+  content: "\f16d"; /* Unicode for Instagram icon */
+  font-family: "Font Awesome 5 Brands";
+  margin-right: 5px;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200px 0; /* Start position for the gradient */
+  }
+  100% {
+    background-position: 200px 0; /* End position for the gradient */
+  }
+}
+/* Contact Me section styles */
+.contact-section {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-section h2 {
+  color: #ffd700;
+  font-size: 28px;
+}
+
+.contact-section p {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.contact-section button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #ffc107;
+}
+
+/* Footer styles */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer p {
+  color: #ccc;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Hero section styles */
+.home-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('project1.png'); 
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-content h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: shine 2s ease-in-out forwards; /* Apply animation */
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 15px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffc107;
+}
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 20px; /* Adjust this value to position the arrow vertically */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: none; /* Start with no shadow */
+    transform: translateX(0); /* Start position */
+  }
+  50% {
+    text-shadow: 0 0 20px #ffd700; /* Shining effect */
+  }
+  100% {
+    text-shadow: none; /* End with no shadow */
+    transform: translateX(100px); /* End position */
   }
 }
