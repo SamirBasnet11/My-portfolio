@@ -16,11 +16,12 @@ function App() {
     };
 
   
-
+        
     return (
+        <div class="portfolio-container">
         <div className={`App ${isLoaded ? 'loaded' : ''}`}>
             <header>
-               <center><h1>Samir Portfolio</h1></center> 
+               <h1>Samir Portfolio</h1>
                 <nav>
                     <ul>
                         <li><a href="#home">HOME</a></li>
@@ -81,7 +82,9 @@ function App() {
                 <p>&copy; {new Date().getFullYear()} Samir's Portfolio. All rights reserved.</p>
             </footer>
         </div>
+        </div>
     );
 }
 
 export default App;
+
