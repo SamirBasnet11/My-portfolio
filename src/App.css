@@ -1,5 +1,3 @@
-/* App.css */
-
 /* Reset */
 * {
   margin: 0;
@@ -9,8 +7,8 @@
 
 /* Body style */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
+  font-family: 'Arial', sans-serif;
+  background-color: #0f0f0f;
   color: #fff;
 }
 
@@ -18,16 +16,22 @@ body {
 header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 36px;
+  font-size: 48px; /* Increase font size */
   font-weight: bold;
+  color: #ffd700; /* Set text color to gold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+  letter-spacing: 2px;
 }
 
 /* Navigation styles */
 nav ul {
   list-style-type: none;
+  text-align: center;
+  margin-top: 20px;
 }
 
 nav ul li {
@@ -38,11 +42,17 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase; /* Convert text to uppercase */
+  padding: 10px 15px; /* Add padding around navigation links */
+  border-radius: 5px; /* Add rounded corners to navigation links */
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffd700;
+  background-color: #ffd700; /* Change background color on hover */
+  color: #000;
 }
 
 /* Section styles */
@@ -93,84 +103,66 @@ section {
 }
 
 .projects-section .project img {
-  width: 50%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
 }
 
+/* Profile section styles */
+.profiles-section {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 100px 20px;
+}
+
+.profiles-section h2 {
+  color: #ffd700;
+  font-size: 28px;
+}
+
 .profile-links {
-  margin-right: 40px; /* Increase the right margin for more spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-links a {
   color: #4fe106;
   text-decoration: none;
-  margin-right: 100px; /* Adjust this value to increase or decrease the spacing between links */
-  position: relative; 
   font-size: 40px;
+  margin: 0 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  line-height: 2;
+  text-decoration-line: initial;
 }
 
-.profile-links a:last-child {
-  margin-right: 0; /* Remove right margin for the last link */
+.profile-links a.github-icon,
+.profile-links a.linkedin-icon,
+.profile-links a.instagram-icon {
+  position: relative;
+  overflow: hidden;
 }
 
 .profile-links a:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffd700; /* Glow color */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 150%;
+  background-color: #ffffff; /* Glow color */
   opacity: 0;
-  border-radius: 5px; /* Adjust this value to match your link's border radius */
+  border-radius: 50%; /* Make the glow circular */
+  z-index: -1;
   transition: opacity 0.3s ease;
-  z-index: -5;
 }
 
 .profile-links a:hover:before {
-  opacity: 0.1; /* Adjust the opacity for the glow effect */
-  animation: shine 3s infinite alternate; /* Add glowing animation */
+  opacity: 10;
 }
 
-.profile-links a.github-icon {
-  background: linear-gradient(to right, #0773e7, transparent); /* Gradient mask */
-  background-size: 200% 100%; /* Double the width to cover the entire text */
-  background-position: -200px 0; /* Initial position of the gradient */
-  color: transparent; /* Hide the original text */
-  text-decoration: none;
-  margin-right: 20px;
-  padding: 2px; /* Adjust padding for better visibility of the effect */
-  position: relative;
-  overflow: hidden;
-}
-
-/* Define a hover effect */
-.profile-links a.github-icon:hover {
-  animation: shine 9s linear infinite; /* Apply the animation */
-  color: #0b95e4; /* Show the text */
-}
-
-.profile-links a.linkedin-icon:before {
-  content: "\f08c"; /* Unicode for LinkedIn icon */
-  font-family: "Font Awesome 5 Brands";
-  margin-right: 5px;
-}
-
-.profile-links a.instagram-icon:before {
-  content: "\f16d"; /* Unicode for Instagram icon */
-  font-family: "Font Awesome 5 Brands";
-  margin-right: 5px;
-}
-
-@keyframes shine {
-  0% {
-    background-position: -200px 0; /* Start position for the gradient */
-  }
-  100% {
-    background-position: 200px 0; /* End position for the gradient */
-  }
-}
 /* Contact Me section styles */
 .contact-section {
   background-color: rgba(0, 0, 0, 0.9);
@@ -238,7 +230,7 @@ footer p {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
-  animation: shine 2s ease-in-out forwards; /* Apply animation */
+  animation: shine 2s ease-in-out forwards;
 }
 
 .hero-content p {
@@ -261,9 +253,10 @@ footer p {
 .cta-button:hover {
   background-color: #ffc107;
 }
+
 .scroll-down-arrow {
   position: absolute;
-  bottom: 20px; /* Adjust this value to position the arrow vertically */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
@@ -289,14 +282,79 @@ footer p {
 
 @keyframes shine {
   0% {
-    text-shadow: none; /* Start with no shadow */
-    transform: translateX(0); /* Start position */
-  }
-  50% {
-    text-shadow: 0 0 20px #ffd700; /* Shining effect */
-  }
-  100% {
-    text-shadow: none; /* End with no shadow */
-    transform: translateX(100px); /* End position */
   }
 }
+
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 24px; /* Reduce font size for smaller screens */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .hero-content h2 {
+    font-size: 36px; /* Reduce font size for smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .project img {
+    max-width: 100%; /* Ensure images are responsive within project containers */
+    height: auto;
+  }
+
+  .profile-links a {
+    font-size: 30px; /* Reduce font size for smaller screens */
+    margin: 0 10px; /* Adjust margin for smaller screens */
+  }
+}
+
+/* Media query for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 20px; /* Further reduce font size for smaller screens */
+  }
+
+  .hero-content h2 {
+    font-size: 24px; /* Further reduce font size for smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Further reduce font size for smaller screens */
+  }
+
+  .profile-links a {
+    font-size: 24px; /* Further reduce font size for smaller screens */
+  }
+}
+
+
+/* Define the animation */
+@keyframes myAnim {
+  0% {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the portfolio container */
+.portfolio-container {
+  animation: myAnim 2s ease-in 0s 1 normal forwards;
+}
+
+
