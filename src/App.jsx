@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Project1FigmaImage from './Project1Figma.png';
-import project2Image from './project1.png'; // Import image for Project 2
+import project2Image from './Project2Figma.png'; // Import image for Project 2
 
 function App() {
     const email = 'sameerbasnet10@gmail.com';
@@ -28,7 +28,7 @@ function App() {
                         <li><a href="#about">ABOUT ME</a></li>
                         <li><a href="#projects">PROJECTS</a></li>
                         <li><a href="#contact">CONTACT ME</a></li>
-                        <li><a href="#profile">PROFILE</a></li>
+                        <li><a href="#profiles">PROFILE</a></li>
                     </ul>
                 </nav>
             </header>
@@ -51,16 +51,21 @@ function App() {
                     <h2>Projects</h2>
                     <div className="projects-container">
                         <div className="project">
+                          
                             <h3>Project 1</h3>
-                            <img src={Project1FigmaImage} alt="Project 1 F" />
+                            <img src={ Project1FigmaImage} alt="Project 1 F" />
                             <p>Figma Design Prototypes for Nike website. Just an small but creative project</p>
                           
                             <a href="https://www.figma.com/proto/99u1OyCh4sR0n0LqCtv5Y5/Untitled?node-id=0-1&t=R8re7FalPkB2sHPA-1" target='_blank' rel='noopener noreferrer'>Nike shoes transition </a>
+                     
                         </div>
                         <div className="project">
                             <h3>Project 2</h3>
-                            <p>Description of Project 2</p>
+                            
                             <img src={project2Image} alt="Project 1" />
+                            <p>Website Design for an Driving Learning App.</p>
+
+                            <a href="https://www.figma.com/proto/99u1OyCh4sR0n0LqCtv5Y5/Untitled?node-id=0-1&t=R8re7FalPkB2sHPA-1" target='_blank' rel='noopener noreferrer'>D for Driving</a>
                         </div>
                     </div>
                 </section>
