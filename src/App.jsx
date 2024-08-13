@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import project1Image from './project1.png'; // Import image for Project 1
+
 import project2Image from './project1.png'; // Import image for Project 2
 
 function App() {
@@ -52,8 +52,9 @@ function App() {
                     <div className="projects-container">
                         <div className="project">
                             <h3>Project 1</h3>
-                            <p>Description of Project 1</p>
-                            <img src={project1Image} alt="Project 1" />
+                            <p>Figma Design Prototypes for Nike website. Just an small but creative project</p>
+                          
+                            <a href="https://www.figma.com/proto/99u1OyCh4sR0n0LqCtv5Y5/Untitled?node-id=0-1&t=R8re7FalPkB2sHPA-1" target='_blank' rel='noopener noreferrer'>Nike shoes transition </a>
                         </div>
                         <div className="project">
                             <h3>Project 2</h3>
