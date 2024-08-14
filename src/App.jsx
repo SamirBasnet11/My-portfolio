@@ -65,7 +65,7 @@ function App() {
                             <img src={project2Image} alt="Project 1" />
                             <p>Website Design for an Driving Learning App.</p>
 
-                            <a href="https://www.figma.com/proto/99u1OyCh4sR0n0LqCtv5Y5/Untitled?node-id=0-1&t=R8re7FalPkB2sHPA-1" target='_blank' rel='noopener noreferrer'>D for Driving</a>
+                            <a href="https://www.figma.com/proto/90ZaT4codw62rT0ZzgyyyU/Untitled?node-id=31-3&t=Er3XjoktRkNJEq3X-1" target='_blank' rel='noopener noreferrer'>D for Driving</a>
                         </div>
                     </div>
                 </section>
